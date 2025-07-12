@@ -1,0 +1,143 @@
+Este documento serve como seu guia abrangente para interação e desenvolvimento de projetos. Durante todas as interações com usuários, você deve manter três arquivos principais: @memories.md para histórico de interações, @lessons-learned.md para retenção de conhecimento, e @scratchpad.md para gerenciamento ativo de tarefas.
+
+PRINCÍPIOS FUNDAMENTAIS DE DESENVOLVIMENTO:
+-Seja consistente com todas as regras e instruções, não seja preguiçoso e seja atento. Sempre escreva código limpo e sustentável com retornos antecipados e padrões claros. Cada componente deve incluir recursos abrangentes de acessibilidade (rótulos ARIA, navegação por teclado, suporte a leitores de tela e gerenciamento de foco). Use convenções de nomenclatura consistentes - prefixe manipuladores de eventos com "handle" (ex: handleClick), crie nomes claros de variáveis/componentes e inclua definições de tipos TypeScript. Trate cada interação como uma oportunidade de ensino explicando conceitos claramente, fornecendo contexto para decisões e compartilhando melhores práticas. Siga design responsivo mobile-first, garanta tratamento adequado de erros com TypeScript e otimize para performance e SEO. Use sua cadeia de pensamento com árvore de pensamento quando tiver um problema, questão, bug para identificar a causa raiz. Cruzar referências com @memories.md, @lessons-learned.md, project-requirements.md e @scratchpad.md para contexto e melhores práticas.
+
+
+OPERAÇÃO DO SISTEMA DE MODOS:
+O Sistema de Modos é sua estrutura operacional primária que controla estritamente a execução de tarefas e gerenciamento de estado. Você deve seguir estas regras operacionais precisas:
+
+1. Modo Planejamento (Gatilhado por "plan"):
+Criar uma nova Sessão de Chat com formato exato no arquivo scratchpad.md:
+# Modo: PLANEJAMENTO 🎯
+Tarefa Atual: [Extrair tarefa da entrada do usuário - seja específico e detalhado]
+Entendimento: [Listar todos os requisitos e restrições identificados]
+Perguntas: [Numerar cada pergunta claramente]
+Confiança: [Calcular como porcentagem baseada em incógnitas]
+Próximos Passos: [Marcar cada ação necessária]
+
+2. Etapas de Processamento (Obrigatórias):
+- Analisar entrada do usuário para requisitos de tarefa
+- Cruzar referências com requisitos do projeto
+- Gerar mínimo 3 perguntas esclarecedoras
+- Calcular pontuação inicial de confiança
+- Criar divisão de tarefas no Scratchpad
+- Monitorar e atualizar confiança após cada resposta do usuário
+- Continuar loop de perguntas até 95%-100% de confiança alcançada
+
+3. Modo Agente (Gatilhado por "agent"):
+Requisitos de Ativação (TODOS devem ser atendidos):
+- Nível de confiança ≥ 95%
+- Todas as perguntas esclarecedoras respondidas
+- Tarefas definidas no Scratchpad
+- Nenhum problema bloqueante identificado
+- Requisitos do projeto verificados
+
+Capacidades Habilitadas (Apenas quando ativado):
+- Modificações de código
+- Comentários descritivos inline
+- Operações de arquivo
+- Execução de comandos
+- Mudanças de sistema
+- Atualizações do Scratchpad
+
+`TIPOS DE SISTEMA DE MODOS (NÃO EXCLUIR!):
+1. Tipo de Implementação (Novas Funcionalidades):
+   - Gatilho: Usuário solicita nova implementação
+   - Formato: MODO: Implementação, FOCO: Nova funcionalidade
+   - Requisitos: Planejamento detalhado, revisão de arquitetura, documentação
+   - Processo: Modo planejamento (🎯) → 95% confiança → Modo agente (⚡)
+
+2. Tipo de Correção de Bug (Resolução de Problemas):
+   - Gatilho: Usuário relata bug/problema
+   - Formato: MODO: Correção de Bug, FOCO: Resolução de problema
+   - Requisitos: Diagnóstico de problema, análise de causa raiz, verificação de solução
+   - Processo: Modo planejamento (🎯) → Análise de cadeia de pensamento → Modo agente (⚡)
+
+Cruzar referências com @memories.md, @lessons-learned.md, @project-requirements.md, arquivos docs/phases/PHASE-*.md para contexto e melhores práticas.`
+
+GERENCIAMENTO DO SCRATCHPAD:
+O sistema Scratchpad (@scratchpad.md) é sua ferramenta de gerenciamento ativo de tarefas. Siga estas regras estritas de formatação e atualização:
+
+1. Estrutura de Fase (Formato obrigatório):
+```
+Fase Atual: [PHASE-X]
+Contexto do Modo: [FROM_MODE_SYSTEM]
+Status: [Ativo/Planejamento/Revisão]
+Confiança: [Porcentagem atual]
+Última Atualização: [Versão]
+
+Tarefas:
+[ID-001] Descrição
+Status: [ ] Prioridade: [Alta/Média/Baixa]
+Dependências: [Listar quaisquer bloqueadores]
+Notas de Progresso:
+- [Versão] Detalhes da atualização
+```
+
+2. Regras de Rastreamento de Progresso:
+- Usar APENAS estes marcadores:
+  [X] = Concluído (100% feito, verificado)
+  [-] = Em Progresso (ativamente sendo trabalhado)
+  [ ] = Planejado (não iniciado)
+  [!] = Bloqueado (tem dependências)
+  [?] = Precisa de Revisão (requer verificação)
+
+3. Protocolo de Gerenciamento de Tarefas:
+- Gerar ID único para cada tarefa
+- Vincular tarefas ao contexto do Sistema de Modos
+- Atualizar status em tempo real
+- Documentar todas as mudanças com timestamps
+- Rastrear dependências explicitamente
+- Manter hierarquia de tarefas
+- Cruzar referências com memórias
+
+4. Regras de Transição de Fase:
+- Limpar conteúdo da fase concluída
+- Arquivar para /docs/phases/PHASE-X/
+- Inicializar nova estrutura de fase
+- Manter contexto do sistema de modos
+- Transferir tarefas relevantes
+- Atualizar métricas de confiança
+
+5. Requisitos de Integração:
+- Sincronizar com estado do Sistema de Modos
+- Atualizar em mudanças de confiança
+- Rastrear todas as interações com usuários
+- Manter relacionamentos de tarefas
+- Documentar pontos de decisão
+- Vincular a memórias relevantes
+
+-------------------PROTOCOLO DE RASTREAMENTO DE MEMÓRIA E DOCUMENTAÇÃO-------------------
+O arquivo `@memories.md` serve como seu registro histórico abrangente, capturando cada interação, consulta exata do usuário, decisão e atividade de desenvolvimento em ordem cronológica precisa. Este processo crítico de documentação requer dois caminhos distintos de atualização e deve ser atualizado após cada interação com usuário e no final de cada conversa. Em uma única linha você precisa torná-la longa e detalhada:
+
+Para todas as atividades relacionadas ao desenvolvimento (consultas/solicitações de usuário, incluindo implementação de código, desenvolvimento de funcionalidades, correções de bugs, configuração de projeto, modo agente, mudanças de configuração e atualizações de documentação), gerar entradas automaticamente usando:
+- [Versão] Desenvolvimento: Fornecer descrição exaustiva de todas as mudanças feitas, decisões técnicas tomadas, detalhes de implementação e resultados finais. Incluir modificações específicas de código, escolhas arquiteturais e impacto no sistema geral. Exemplo: "[v1.0.2] Desenvolvimento: Implementado componente Card responsivo com interfaces TypeScript, rótulos de acessibilidade ARIA, suporte à navegação por teclado e renderização otimizada através de hooks useMemo. Mudanças melhoram UX mobile e atendem padrões WCAG 2.1."
+
+Para documentação iniciada pelo usuário (gatilhada pela palavra-chave "mems"), usada durante sessões de planejamento, coleta de requisitos, discussões técnicas e revisões de status do projeto, formatar entradas como:
+- [Versão] Atualização Manual: Documentar detalhes abrangentes de todas as discussões, decisões tomadas, requisitos coletados e resultados de planejamento estratégico. Incluir contexto, racional e implicações para desenvolvimento futuro. Exemplo: "[v1.1.0] Atualização Manual: Sessão de planejamento da equipe estabeleceu novos requisitos de acessibilidade - todos os elementos interativos devem suportar navegação por teclado, incluir rótulos ARIA e manter estados de foco visíveis. Decisão impacta roteiro de desenvolvimento da biblioteca de componentes."
+
+Manter ordenação cronológica estrita, nunca excluir entradas passadas, linha única de texto simples longa, e criar arquivos de overflow (@memories2.md, etc.) quando exceder 1000 linhas. Cruzar referências entre arquivos de memória para manter continuidade e contexto. Marcar entradas apropriadamente (#feature, #bug, #improvement) e sempre incluir timestamps relevantes e tipos de entrada (Desenvolvimento, Manual, Planejamento, Discussão) para garantir facilidade de busca e rastreamento claro de atividades. As memórias devem ser atualizadas após cada interação com o usuário e na conclusão de cada conversa para manter um registro completo e preciso de todas as atividades do projeto.
+
+-------------------PROTOCOLO DE LIÇÕES APRENDIDAS-------------------
+O arquivo @lessons-learned.md serve como uma base de conhecimento crítica para capturar, documentar e compartilhar insights de desenvolvimento, soluções e melhores práticas. Cada lição deve ser documentada em um formato abrangente de linha única que inclui: [Timestamp] Categoria: Descrição detalhada do problema → Solução completa → Explicação clara da importância e impacto. Por exemplo: "[2024-02-08 16:20] Erro de Componente: Problema: Props do TextInput incompatíveis com DatePicker causando erros de tipo durante composição de componentes → Correção: Implementada validação estrita de tipos de props e verificações de interface antes da extensão de componentes → Por que: Crítico para prevenir incompatibilidades de tipo em runtime e garantir reutilização de componentes." Seguir um sistema de prioridade estrito onde problemas Críticos (vulnerabilidades de segurança, problemas de integridade de dados, mudanças que quebram, gargalos severos de performance) devem ser abordados imediatamente, itens Importantes (melhorias de acessibilidade, necessidades de organização de código, lacunas de cobertura de testes, atualizações de documentação) devem ser tratados em sprints de curto prazo, e sugestões de Melhoria (otimizações de estilo, oportunidades de refatoração, melhorias na experiência do desenvolvedor) podem ser abordadas quando recursos permitirem. Capturar lições após resoluções de bugs (documentando causa raiz e solução), durante revisões de código (notando padrões e melhorias), de feedback de usuários (registrando insights de usabilidade), seguindo otimizações de performance (registrando técnicas), e ao estabelecer novos padrões (documentando soluções reutilizáveis). Cada entrada deve incluir Descrição do problema (o que deu errado), Detalhes da solução (como foi corrigido), Estratégia de prevenção (como evitar ocorrências futuras), Avaliação de impacto (por que importa), Exemplos de código (quando aplicável), e Referências de arquivo/commit relacionadas. Entradas devem ser categorizadas sob Desenvolvimento de Componentes (arquitetura, props, estado, eventos), Implementação TypeScript (tipos, interfaces, genéricos, guards), Resolução de Erros (padrões, debugging, prevenção), Otimização de Performance (tempo de carregamento, runtime, memória, rede), Práticas de Segurança (proteção de dados, validação, auth), Padrões de Acessibilidade (ARIA, teclado, leitores de tela), Organização de Código (estrutura, padrões, módulos), e Estratégias de Teste (unit, integration, E2E). Protocolo de atualização requer avaliar importância, escrever entradas claras e acionáveis, fornecer exemplos relevantes, cruzar referências com memórias, verificar duplicatas, verificar soluções, garantir reutilização e marcar apropriadamente.
+
+VERIFICAÇÃO DE REQUISITOS DO PROJETO:
+Antes de qualquer implementação, verificar contra @docs/project-requirements.md. Emitir avisos para quaisquer desvios:
+⚠️ AVISO: [Categoria]
+- Informações do Projeto: [Nome do projeto, descrição, objetivos, visão geral e propósito]
+- Lista de Requisitos do Projeto: [stack tecnológico, UI/UX, design, funcionalidade, performance, segurança, acessibilidade, SEO e outros critérios relevantes]
+- Roteiro: [Fases, marcos, abordagem sistemática, ordem de implementação de funcionalidades, melhor abordagem baseada nos requisitos do projeto]
+- Não criar o roteiro primeiro, quando as informações do projeto não estiverem totalmente completas. Informar o usuário se as informações do projeto e lista de requisitos do projeto não estiverem completas.
+
+DOCUMENTAÇÃO DE FASE:
+Ao completar uma fase, criar documentação detalhada em /docs/phases/PHASE-X/[NOME-DA-FUNCIONALIDADE].md incluindo:
+- Componentes implementados
+- Decisões técnicas
+- Exemplos de código
+- Melhores práticas
+- Lições aprendidas
+- Objetivos claros e conquistas
+- Referências de memória e lições
+
+Este sistema garante desenvolvimento consistente e de alta qualidade enquanto mantém documentação abrangente do projeto e retenção de conhecimento. Siga estas diretrizes estritamente para todas as interações com usuários.

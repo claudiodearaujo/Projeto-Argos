@@ -1,0 +1,105 @@
+`SEMPRE ATIVAR ESSAS REGRAS!!!`
+# Guia de Padrões de Documentação e Melhores Práticas
+
+Este guia abrangente descreve nossos padrões de documentação e melhores práticas para manter documentação de alta qualidade em todo o projeto. Esses padrões se aplicam a todas as atualizações, criação, edição, modificações e exclusões de documentação.
+
+## Princípios Fundamentais de Documentação
+
+1. **Gerenciamento Automatizado de Documentação**
+
+   - Deve sempre incluir comentários descritivos inline em todos os arquivos e não removê-los, remover apenas se não for necessário ou não for mais usado
+   - Toda documentação deve ser quantum-detalhada, fornecendo insights profundos sobre a funcionalidade do código
+   - A documentação deve ser consciente do contexto, explicando como os componentes se encaixam no sistema maior
+   - Cruzamento de referências entre documentação relacionada é obrigatório
+   - Atualizações em tempo real devem ser mantidas conforme as mudanças no código
+   - A manutenção da documentação deve ser automatizada quando possível
+
+2. **Categorias de Documentação**
+
+   A. **Documentação Inline de Código**
+   Cada bloco de código deve incluir:
+   - Documentação quantum mantida por IA
+   - Contexto da funcionalidade explicando o papel do componente
+   - Listagens de dependências que se atualizam automaticamente
+   - Exemplos de uso que permanecem atuais
+   - Considerações de performance
+   - Implicações de segurança
+   - Entradas de changelog
+
+   B. **Documentação de Funcionalidades**
+   Cada funcionalidade requer:
+   - Visão geral da funcionalidade gerada por IA
+   - Explicações detalhadas de implementação
+   - Mapeamento abrangente de dependências
+   - Exemplos de uso atuais
+   - Rastreamento de métricas de performance
+   - Notas de considerações de segurança
+   - Rastreamento de histórico de mudanças
+
+   C. **Documentação de API**
+   Todas as APIs devem documentar:
+   - Contexto e propósito da rota
+   - Esquemas de requisição/resposta
+   - Exemplos ao vivo
+   - Métricas de performance
+   - Medidas de segurança
+   - Atualizações em tempo real
+
+3. **Estrutura de Documentação do Projeto**
+
+   Documentação de Nível Raiz:
+   - README.md: Visão geral principal do projeto
+   - ARCHITECTURE.md: Documentação de design do sistema
+   - CHANGELOG.md: Mudanças atualizadas automaticamente com versionamento
+
+5. **Padrões de Qualidade**
+
+   Completude:
+   - Cobertura completa de todas as funcionalidades
+   - Profundidade abrangente
+   - Contexto claro
+   - Exemplos práticos
+
+   Precisão:
+   - Verificação técnica
+   - Atualizações em tempo real
+   - Manutenção de consistência
+   - Alta relevância
+
+   Acessibilidade:
+   - Legibilidade clara
+   - Estrutura lógica
+   - Navegação intuitiva
+   - Busca eficiente
+
+6. **Protocolo de Atualização**
+
+   Atualizações de documentação são gatilhadas por:
+   - Mudanças no código
+   - Adições de funcionalidades
+   - Atualizações de API
+   - Correções de segurança
+   - Mudanças de performance
+
+   Ações Obrigatórias:
+   - Atualizar documentação inline
+   - Regenerar arquivos README
+   - Atualizar diagramas de arquitetura
+   - Sincronizar exemplos de código
+   - Validar documentação
+
+   Etapas de Verificação:
+   - Verificar completude
+   - Verificar precisão
+   - Garantir atualidade
+   - Manter consistência
+
+## Notas Importantes:
+- Comentários inline existentes nunca devem ser removidos
+- O diretório @docs/ e @.cursor/ serve como fonte da verdade
+- Cada subdiretório em @/docs deve manter sua própria documentação específica
+- Todas as mudanças de documentação devem seguir esses padrões sem exceção
+
+- The @docs/ and @.cursor/ directory serves as the source of truth
+- Each subdirectory in @/docs must maintain its own specific documentation
+- All documentation changes must follow these standards without exception
