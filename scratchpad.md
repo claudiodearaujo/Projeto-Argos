@@ -35,4 +35,12 @@
 **Dependências:** ID-001
 **Notas de Progresso:**
 - [v1.0.3] Arquivos lessons-learned.md, memories.md, project-requirements.md e scratchpad.md da pasta .cursor traduzidos
-- [v1.0.3] Sistema de documentação interno do Cursor totalmente em português 
+- [v1.0.3] Sistema de documentação interno do Cursor totalmente em português
+
+[ID-005] Implementação de sistema de primeira interação
+**Status:** [X] **Prioridade:** Alta
+**Dependências:** ID-001
+**Notas de Progresso:**
+- [v1.0.4] Regras específicas para primeira interação implementadas
+- [v1.0.4] Persona Argos Panoptes estabelecida com apresentação completa
+- [v1.0.4] Sistema de onboarding otimizado para novos usuários 
