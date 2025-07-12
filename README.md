@@ -25,6 +25,41 @@ Um sistema abrangente para gerenciar interações de IA através de gerenciament
    - Mantém dependências de tarefas
    - Atualiza métricas de confiança
 
+## 🚀 Primeira Interação - Onboarding Automático
+
+### Análise Automática do Projeto
+Na primeira interação, quando a pasta `@docs` não existe, o sistema:
+
+1. **Análise Completa do Projeto**:
+   - Lê toda a estrutura de arquivos
+   - Identifica tecnologias utilizadas
+   - Analisa dependências e configurações
+   - Detecta padrões de código existentes
+
+2. **Criação de Documentação Inicial**:
+   - Utiliza templates da pasta `.cursor/templates`
+   - Adapta conteúdo ao contexto específico do projeto
+   - Cria estrutura de documentação completa
+   - Estabelece padrões de qualidade
+
+3. **Apresentação da Persona Argos Panoptes**:
+   - Se apresenta como assistente especializado
+   - Explica capacidades e especialidades
+   - Informa sobre a documentação criada
+   - Oferece suporte para próximos passos
+
+### Fluxo da Primeira Interação
+```markdown
+1. Detecção: Sistema verifica ausência de @docs
+2. Análise: Leitura completa da estrutura do projeto
+3. Templates: Aplicação de templates disponíveis
+4. Adaptação: Personalização para contexto específico
+5. Criação: Geração de documentação inicial
+6. Apresentação: Persona Argos Panoptes se apresenta
+7. Informação: Comunica sobre documentação criada
+8. Suporte: Oferece assistência para próximos passos
+```
+
 ## 🎯 Operação do Sistema de Modos
 
 ### Modo Planejamento 🎯
@@ -78,7 +113,34 @@ Requisitos de Ativação:
 
 ## 🎮 Exemplos de Fluxo de Trabalho
 
-### Exemplo 1: Criando uma Nova Funcionalidade
+### Exemplo 1: Primeira Interação com Projeto Novo
+```markdown
+SISTEMA: 🔍 DETECTANDO PRIMEIRA INTERAÇÃO
+- Pasta @docs não encontrada
+- Iniciando análise automática do projeto
+- Lendo estrutura de arquivos
+- Identificando tecnologias
+
+SISTEMA: 📋 ANÁLISE COMPLETA
+- Projeto: Next.js 14 + TypeScript
+- UI: Tailwind CSS + Shadcn UI
+- Estado: Zustand
+- Testes: Jest + Testing Library
+
+SISTEMA: 📚 CRIANDO DOCUMENTAÇÃO
+- Aplicando templates disponíveis
+- Adaptando ao contexto do projeto
+- Criando estrutura @docs completa
+- Estabelecendo padrões de qualidade
+
+ARGOS PANOPTES: 👋 OLÁ! SOU SEU ASSISTENTE ESPECIALIZADO
+- Especialista em desenvolvimento web moderno
+- Capacidades: React, TypeScript, Next.js, UI/UX
+- Documentação inicial criada automaticamente
+- Pronto para ajudar com seu projeto!
+```
+
+### Exemplo 2: Criando uma Nova Funcionalidade
 ```markdown
 USUÁRIO: "plan implementar um novo componente de botão"
 
@@ -107,7 +169,7 @@ IA: ⚡ MODO AGENTE ATIVADO
 - Testando acessibilidade
 ```
 
-### Exemplo 2: Corrigindo um Bug
+### Exemplo 3: Corrigindo um Bug
 ```markdown
 USUÁRIO: "plan corrigir o erro de envio do formulário"
 
@@ -135,7 +197,7 @@ IA: ⚡ MODO AGENTE ATIVADO
 - Testar envio
 ```
 
-### Exemplo 3: Configuração do Projeto
+### Exemplo 4: Configuração do Projeto
 ```markdown
 USUÁRIO: "plan configurar novo projeto Next.js"
 
@@ -163,7 +225,7 @@ IA: ⚡ MODO AGENTE ATIVADO
 - Instalando dependências
 ```
 
-### Exemplo 4: Atualização de Documentação
+### Exemplo 5: Atualização de Documentação
 ```markdown
 USUÁRIO: "plan atualizar documentação da API"
 
@@ -218,8 +280,13 @@ IA: ⚡ MODO AGENTE ATIVADO
 ├── lessons-learned.md   # Soluções e práticas
 ├── scratchpad.md       # Rastreamento da fase atual
 ├── project-requirements.md  # Especificações do projeto
+├── templates/          # Templates para documentação
+│   ├── project-analysis.md
+│   ├── requirements.md
+│   └── documentation.md
 └── rules/              # Regras do sistema
-    └── .cursorrules    # Arquivo de regras principais
+    ├── brain-memories-lessons-learned-scratchpad.mdc
+    └── documentations-inline-comments-changelog-docs.mdc
 ```
 
 ## 🛠️ Melhores Práticas
@@ -241,6 +308,12 @@ IA: ⚡ MODO AGENTE ATIVADO
    - Incluir números de versão
    - Cruzar referências de arquivos relacionados
    - Seguir formatos estruturados
+
+4. **Primeira Interação**
+   - Análise automática completa
+   - Criação de documentação inicial
+   - Apresentação da persona
+   - Estabelecimento de padrões
 
 ## 🎯 Dicas e Truques
 
@@ -265,6 +338,7 @@ IA: ⚡ MODO AGENTE ATIVADO
 - Usar gatilhos apropriados
 - Seguir formato de versão
 - Cruzar referências frequentemente
+- Aproveitar onboarding automático na primeira interação
 
 ## 🤝 Contribuindo
 Sinta-se livre para melhorar este sistema:
@@ -272,6 +346,7 @@ Sinta-se livre para melhorar este sistema:
 2. Melhorar rastreamento
 3. Aprimorar métricas
 4. Compartilhar práticas
+5. Expandir templates de documentação
 
 ## 📝 Licença
 Licença MIT - Livre para usar e modificar!
