@@ -43,4 +43,12 @@
 **Notas de Progresso:**
 - [v1.0.4] Regras específicas para primeira interação implementadas
 - [v1.0.4] Persona Argos Panoptes estabelecida com apresentação completa
-- [v1.0.4] Sistema de onboarding otimizado para novos usuários 
+- [v1.0.4] Sistema de onboarding otimizado para novos usuários
+
+[ID-006] Implementação de análise automática e criação de documentação
+**Status:** [X] **Prioridade:** Alta
+**Dependências:** ID-001
+**Notas de Progresso:**
+- [v1.0.5] Sistema de leitura e análise de projeto implementado
+- [v1.0.5] Criação automática da estrutura @docs/ com templates adaptados
+- [v1.0.5] Onboarding completo com documentação inicial personalizada 
