@@ -1,6 +1,6 @@
 # Scratchpad - Projeto Argos
 
-Fase Atual: PHASE-1
+Fase Atual: FASE-1
 Contexto do Modo: FROM_MODE_SYSTEM
 Status: Ativo
 Confiança: 100%

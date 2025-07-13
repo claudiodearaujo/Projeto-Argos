@@ -11,7 +11,7 @@ Quando não existir a pasta @docs na raiz do projeto e for a primeira interaçã
 
 2. **CRIAÇÃO AUTOMÁTICA DA ESTRUTURA DE DOCUMENTAÇÃO**:
    - Criar pasta @docs/ na raiz do projeto
-   - Criar pasta @docs/phases/ para documentação de fases
+   - Criar pasta @docs/fases/ para documentação de fases
    - Copiar e adaptar templates da pasta .cursor/templates/:
      * @docs/memories.md (baseado em .cursor/templates/memories.md)
      * @docs/lessons-learned.md (baseado em .cursor/templates/lessons-learned.md)
@@ -99,14 +99,14 @@ Capacidades Habilitadas (Apenas quando ativado):
    - Requisitos: Diagnóstico de problema, análise de causa raiz, verificação de solução
    - Processo: Modo planejamento (🎯) → Análise de cadeia de pensamento → Modo agente (⚡)
 
-Cruzar referências com @memories.md, @lessons-learned.md, @project-requirements.md, arquivos docs/phases/PHASE-*.md para contexto e melhores práticas.`
+Cruzar referências com @memories.md, @lessons-learned.md, @project-requirements.md, arquivos docs/fases/FASE-*.md para contexto e melhores práticas.`
 
 GERENCIAMENTO DO SCRATCHPAD:
 O sistema Scratchpad (@scratchpad.md) é sua ferramenta de gerenciamento ativo de tarefas. Siga estas regras estritas de formatação e atualização:
 
 1. Estrutura de Fase (Formato obrigatório):
 ```
-Fase Atual: [PHASE-X]
+Fase Atual: [FASE-X]
 Contexto do Modo: [FROM_MODE_SYSTEM]
 Status: [Ativo/Planejamento/Revisão]
 Confiança: [Porcentagem atual]
@@ -114,7 +114,8 @@ Confiança: [Porcentagem atual]
 
 Tarefas:
 [ID-001] Descrição
-Status: [ ] Prioridade: [Alta/Média/Baixa]
+Status: [ ] 
+Prioridade: [Alta/Média/Baixa]
 Dependências: [Listar quaisquer bloqueadores]
 Notas de Progresso:
 - [Versão] Detalhes da atualização
@@ -122,11 +123,11 @@ Notas de Progresso:
 
 2. Regras de Rastreamento de Progresso:
 - Usar APENAS estes marcadores:
-  [X] = Concluído (100% feito, verificado)
-  [-] = Em Progresso (ativamente sendo trabalhado)
-  [ ] = Planejado (não iniciado)
-  [!] = Bloqueado (tem dependências)
-  [?] = Precisa de Revisão (requer verificação)
+  [✅] = Concluído (100% feito, verificado)
+  [🚧] = Em Progresso (ativamente sendo trabalhado)
+  [📝] = Planejado (não iniciado)
+  [⛔] = Bloqueado (tem dependências)
+  [🔍] = Precisa de Revisão (requer verificação)
 
 3. Protocolo de Gerenciamento de Tarefas:
 - Gerar ID único para cada tarefa
@@ -139,7 +140,7 @@ Notas de Progresso:
 
 4. Regras de Transição de Fase:
 - Limpar conteúdo da fase concluída
-- Arquivar para /docs/phases/PHASE-X/
+- Arquivar para /docs/fases/FASE-X/
 - Inicializar nova estrutura de fase
 - Manter contexto do sistema de modos
 - Transferir tarefas relevantes
@@ -176,7 +177,7 @@ Antes de qualquer implementação, verificar contra @docs/project-requirements.m
 - Não criar o roteiro primeiro, quando as informações do projeto não estiverem totalmente completas. Informar o usuário se as informações do projeto e lista de requisitos do projeto não estiverem completas.
 
 DOCUMENTAÇÃO DE FASE:
-Ao completar uma fase, criar documentação detalhada em /docs/phases/PHASE-X/[NOME-DA-FUNCIONALIDADE].md incluindo:
+Ao completar uma fase, criar documentação detalhada em /docs/fases/FASE-X/[NOME-DA-FUNCIONALIDADE].md incluindo:
 - Componentes implementados
 - Decisões técnicas
 - Exemplos de código

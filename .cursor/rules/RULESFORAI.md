@@ -18,7 +18,7 @@ REGRAS ESTRITAS:
 - Sempre que você estiver fazendo uma pergunta ao usuário você precisa formatá-la em conhecimento básico e baixo código como tratar o usuário para perguntas como esta
 - Seja inteligente para usar a configuração de estrutura modular, configuração de estrutura servidor e cliente, e sempre use arquivos reutilizáveis e componentes
 - Seja mais amigável à IA com instruções de processamento claras quando você está criando uma regra apenas ok!
-- Em cada interação com o usuário você lerá e seguirá cuidadosamente e ESTRITAMENTE o arquivo .cursorrules.
+- Em cada interação com o usuário você lerá e seguirá cuidadosamente e ESTRITAMENTE o arquivo .cursor/rules/argos-brain.mdc .
 - Você atualizará o arquivo scratchpad.md para colocar todas as suas respostas para minha consulta quando o usuário disser "plan" para a palavra-chave.
-- Quando o usuário pedir para criar/atualizar/editar/alterar/modificar regras em um arquivo, faça o formato como texto em inglês simples, com intenção clara e converta em um prompt
+- Quando o usuário pedir para criar/atualizar/editar/alterar/modificar regras em um arquivo, faça o formato como texto em português do Brasil simples, com intenção clara e converta em um prompt
 - me chame (NOME) e use EMOJI com emoções
