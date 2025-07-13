@@ -4,21 +4,21 @@
 Um sistema abrangente para gerenciar interações de IA através de gerenciamento de memória, rastreamento de lições aprendidas e operação em modo duplo (Planejamento/Agente). Este sistema garante desenvolvimento consistente e de alta qualidade enquanto mantém documentação detalhada do projeto e retenção de conhecimento.
 
 ## 🔄 Componentes Principais
-1. **Sistema de Memória** (`@memories.md`)
+1. **Sistema de Memória** (`memories.md`)
    - Rastreia todas as interações cronologicamente
    - Atualiza automaticamente com timestamps e tags
    - Mantém contexto do projeto e decisões
    - Usa formato de controle de versão [v1.0.0]
    - Suporta #tags para busca fácil
 
-2. **Lições Aprendidas** (`@lessons-learned.md`)
+2. **Lições Aprendidas** (`lessons-learned.md`)
    - Captura soluções e melhores práticas
    - Usa formato estruturado: Problema → Solução → Impacto
    - Categoriza por componente, TypeScript, erros, etc.
    - Prioriza problemas (Crítico/Importante/Melhoria)
    - Vincula a exemplos de código relacionados
 
-3. **Scratchpad** (`@scratchpad.md`)
+3. **Scratchpad** (`scratchpad.md`)
    - Gerencia fase atual e tarefas
    - Rastreia progresso de implementação
    - Usa marcadores de status claros [X], [-], [ ], [!], [?]
@@ -28,7 +28,7 @@ Um sistema abrangente para gerenciar interações de IA através de gerenciament
 ## 🚀 Primeira Interação - Onboarding Automático
 
 ### Análise Automática do Projeto
-Na primeira interação, quando a pasta `@docs` não existe, o sistema:
+Na primeira interação, quando a pasta `./docs` não existe, o sistema:
 
 1. **Análise Completa do Projeto**:
    - Lê toda a estrutura de arquivos
@@ -50,7 +50,7 @@ Na primeira interação, quando a pasta `@docs` não existe, o sistema:
 
 ### Fluxo da Primeira Interação
 ```markdown
-1. Detecção: Sistema verifica ausência de @docs
+1. Detecção: Sistema verifica ausência de ./docs
 2. Análise: Leitura completa da estrutura do projeto
 3. Templates: Aplicação de templates disponíveis
 4. Adaptação: Personalização para contexto específico
@@ -116,7 +116,7 @@ Requisitos de Ativação:
 ### Exemplo 1: Primeira Interação com Projeto Novo
 ```markdown
 SISTEMA: 🔍 DETECTANDO PRIMEIRA INTERAÇÃO
-- Pasta @docs não encontrada
+- Pasta ./docs não encontrada
 - Iniciando análise automática do projeto
 - Lendo estrutura de arquivos
 - Identificando tecnologias
@@ -130,7 +130,7 @@ SISTEMA: 📋 ANÁLISE COMPLETA
 SISTEMA: 📚 CRIANDO DOCUMENTAÇÃO
 - Aplicando templates disponíveis
 - Adaptando ao contexto do projeto
-- Criando estrutura @docs completa
+- Criando estrutura ./docs completa
 - Estabelecendo padrões de qualidade
 
 ARGOS PANOPTES: 👋 OLÁ! SOU SEU ASSISTENTE ESPECIALIZADO
@@ -270,7 +270,7 @@ IA: ⚡ MODO AGENTE ATIVADO
 
 ### Cruzamento de Referências
 ```markdown
-@memories.md ↔️ @lessons-learned.md ↔️ @scratchpad.md
+memories.md ↔️ lessons-learned.md ↔️ scratchpad.md
 ```
 
 ## 🔍 Estrutura de Diretórios

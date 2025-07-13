@@ -1,0 +1,111 @@
+---
+alwaysApply: true
+---
+
+# 📚 Padrões de Documentação e Melhores Práticas - Projeto Argos
+
+## 🎯 **Princípios Fundamentais de Documentação**
+
+### 1. **Gerenciamento Automatizado de Documentação**
+- **Sempre incluir comentários descritivos inline** em todos os arquivos e não removê-los (remover apenas se não for necessário ou não for mais usado)
+- **Documentação quantum-detalhada** fornecendo insights profundos sobre a funcionalidade do código
+- **Documentação consciente do contexto** explicando como os componentes se encaixam no sistema maior
+- **Referências cruzadas** entre documentação relacionada são obrigatórias
+- **Atualizações em tempo real** devem ser mantidas conforme as mudanças no código
+- **Manutenção da documentação** deve ser automatizada quando possível
+
+### 2. **Categorias de Documentação**
+
+#### A. **Documentação Inline de Código**
+Cada bloco de código deve incluir:
+- Documentação quantum mantida por IA
+- Contexto da funcionalidade explicando o papel do componente
+- Listagens de dependências que se atualizam automaticamente
+- Exemplos de uso que permanecem atuais
+- Considerações de performance
+- Implicações de segurança
+- Entradas de changelog
+
+#### B. **Documentação de Funcionalidades**
+Cada funcionalidade requer:
+- Visão geral da funcionalidade gerada por IA
+- Explicações detalhadas de implementação
+- Mapeamento abrangente de dependências
+- Exemplos de uso atuais
+- Rastreamento de métricas de performance
+- Notas de considerações de segurança
+- Rastreamento de histórico de mudanças
+
+#### C. **Documentação de API**
+Todas as APIs devem documentar:
+- Contexto e propósito da rota
+- Esquemas de requisição/resposta
+- Exemplos ao vivo
+- Métricas de performance
+- Medidas de segurança
+- Atualizações em tempo real
+
+### 3. **Estrutura de Documentação do Projeto**
+
+#### Documentação de Nível Raiz:
+- **README.md**: Visão geral principal do projeto
+- **ARCHITECTURE.md**: Documentação de design do sistema
+- **CHANGELOG.md**: Mudanças atualizadas automaticamente com versionamento
+
+## 🔍 **Padrões de Qualidade**
+
+### ✅ **Completude:**
+- Cobertura completa de todas as funcionalidades
+- Profundidade abrangente
+- Contexto claro
+- Exemplos práticos
+
+### 🎯 **Precisão:**
+- Verificação técnica
+- Atualizações em tempo real
+- Manutenção de consistência
+- Alta relevância
+
+### 📖 **Acessibilidade:**
+- Legibilidade clara
+- Estrutura lógica
+- Navegação intuitiva
+- Busca eficiente
+
+## 🔄 **Protocolo de Atualização**
+
+### Gatilhos de Atualização de Documentação:
+- Mudanças no código
+- Adições de funcionalidades
+- Atualizações de API
+- Correções de segurança
+- Mudanças de performance
+
+### Ações Obrigatórias:
+- Atualizar documentação inline
+- Regenerar arquivos README
+- Atualizar diagramas de arquitetura
+- Sincronizar exemplos de código
+- Validar documentação
+
+### Etapas de Verificação:
+- Verificar completude
+- Verificar precisão
+- Garantir atualidade
+- Manter consistência
+
+## ⚠️ **Notas Importantes**
+
+### 📝 **Regras Críticas:**
+- **Comentários inline existentes nunca devem ser removidos**
+- **O diretório ./docs/ e .cursor/ serve como fonte da verdade**
+- **Cada subdiretório em ./docs/ deve manter sua própria documentação específica**
+- **Todas as mudanças de documentação devem seguir esses padrões sem exceção**
+
+### 🔗 **Integração com Sistema Argos:**
+- Este arquivo trabalha em conjunto com `.cursor/core/argos-brain.mdc`
+- Referências cruzadas com `memories.md`, `lessons-learned.md` e `scratchpad.md`
+- Sincronização automática com templates em `.cursor/templates/`
+
+---
+*Este documento define os padrões de documentação para garantir consistência e qualidade em todo o projeto Argos.*

@@ -1,4 +1,4 @@
-*Este arquivo de lições aprendidas serve como uma base de conhecimento crítica para capturar e prevenir erros. Durante o desenvolvimento, documente qualquer solução reutilizável, correção de bugs ou padrões importantes usando o formato: [Timestamp] Categoria: Problema → Solução → Impacto. As entradas devem ser categorizadas por prioridade (Crítico/Importante/Melhoria) e incluir declarações claras de problemas, soluções, etapas de prevenção e exemplos de código. Atualize apenas mediante solicitação do usuário com a palavra-chave "lesson". Foque em lições de alto impacto e reutilizáveis que melhorem a qualidade do código, previnam erros comuns e estabeleçam melhores práticas. Cruzar referências com @memories.md para contexto.*
+*Base de conhecimento para capturar e prevenir erros. Documente soluções reutilizáveis usando o formato: [Timestamp] Categoria: Problema → Solução → Impacto. Categorize por prioridade (Crítico/Importante/Melhoria). Atualize com a palavra-chave "lesson". Foque em lições de alto impacto e reutilizáveis.*
 
 # Lições Aprendidas
 

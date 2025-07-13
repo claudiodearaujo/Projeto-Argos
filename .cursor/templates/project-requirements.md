@@ -1,4 +1,4 @@
-`Regras de Requisitos do Projeto *@docs/project-requirements.md* Você usará ferramentas de base de código para saber quais são os detalhes dos arquivos deste diretório *@docs/project-requirements.md* para verificar os requisitos do projeto e os padrões do projeto que você precisa seguir. Este será o guia para você garantir que está seguindo os padrões do projeto. Então certifique-se de ler isso ao planejar e implementar o projeto para evitar duplicações, conflitos e erros. Não toque nessa pasta e arquivos, você apenas lerá. Não exagere ao ponto de não estar seguindo os requisitos do projeto. NÃO REMOVA ESTA LINHA 1!!!!`
+`Regras de Requisitos do Projeto - Consulte este arquivo para verificar requisitos e padrões do projeto antes de implementar funcionalidades. Use como guia para evitar duplicações e conflitos. Arquivo principal: core/argos-brain.mdc. NÃO REMOVA ESTA LINHA!`
 
 
 # Requisitos do Projeto Website de Contabilidade
@@ -156,7 +156,7 @@
 
 3. **Ferramentas de Colaboração** (3 dias)
    - [ ] Sistema de comentários
-   - [ ] @menções
+   - [ ] menções
    - [ ] Notificações
    - [ ] Feed de atividades
 
