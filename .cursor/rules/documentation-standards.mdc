@@ -103,7 +103,7 @@ Todas as APIs devem documentar:
 - **Todas as mudanças de documentação devem seguir esses padrões sem exceção**
 
 ### 🔗 **Integração com Sistema Argos:**
-- Este arquivo trabalha em conjunto com `.cursor/core/argos-brain.mdc`
+- Este arquivo trabalha em conjunto com `.cursor/rules/argos-brain.mdc`
 - Referências cruzadas com `memories.md`, `lessons-learned.md` e `scratchpad.md`
 - Sincronização automática com templates em `.cursor/templates/`
 

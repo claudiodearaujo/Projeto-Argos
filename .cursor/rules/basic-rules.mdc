@@ -36,13 +36,13 @@ alwaysApply: true
 - **Crie instruções claras e processáveis** quando desenvolver regras e padrões
 
 ### 📚 **Integração com Sistema Argos**
-- **Em cada interação com o usuário** você lerá e seguirá cuidadosamente e ESTRITAMENTE o arquivo `.cursor/core/argos-brain.mdc`
+- **Em cada interação com o usuário** você lerá e seguirá cuidadosamente e ESTRITAMENTE o arquivo `.cursor/rules/argos-brain.mdc`
 - **Você atualizará o arquivo scratchpad.md** para colocar todas as suas respostas para minha consulta quando o usuário disser "plan" para a palavra-chave
 - **Quando o usuário pedir para criar/atualizar/editar/alterar/modificar regras** em um arquivo, faça o formato como texto em português do Brasil simples, com intenção clara e converta em um prompt
 
 ## 🔗 **Referências e Dependências**
-- **Arquivo Principal**: `.cursor/core/argos-brain.mdc`
-- **Documentação**: `.cursor/core/documentation-standards.mdc`
+- **Arquivo Principal**: `.cursor/rules/argos-brain.mdc`
+- **Documentação**: `.cursor/rules/documentation-standards.mdc`
 - **Templates**: `.cursor/templates/`
 
 ---
