@@ -42,7 +42,6 @@ alwaysApply: true
 
 ## 🔗 **Referências e Dependências**
 - **Arquivo Principal**: `.cursor/rules/argos-brain.mdc`
-- **Documentação**: `.cursor/rules/documentation-standards.mdc`
 - **Templates**: `.cursor/templates/`
 
 ---
