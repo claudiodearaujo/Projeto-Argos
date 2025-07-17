@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "projeto-argos-mcp": {
+      "command": "node",
+      "args": ["index.cjs"],
+      "cwd": "C:\\desenv\\ProjetoArgos\\Projeto-Argos\\src\\mcp-server",
+      "env": {
+        "LOG_LEVEL": "debug",
+        "NODE_ENV": "development"
+      }
+    }
+  }
+} 

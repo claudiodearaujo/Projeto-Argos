@@ -1,0 +1,36 @@
+{
+  "name": "projeto-argos",
+  "version": "1.0.0",
+  "description": "Projeto Argos - Sistema inteligente de desenvolvimento com MCP Server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "node index.js",
+    "setup:mcp": "node setup-mcp.cjs",
+    "mcp:server": "node src/mcp-server/index.cjs",
+    "mcp:build": "tsc src/mcp-server/index.ts --outDir build --target ES2022 --module Node16 --moduleResolution Node16",
+    "mcp:inspect": "npx @modelcontextprotocol/inspector src/mcp-server/index.cjs",
+    "mcp:test": "node test-mcp.cjs"
+  },
+  "keywords": [
+    "argos",
+    "ai",
+    "development",
+    "automation",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+} 
