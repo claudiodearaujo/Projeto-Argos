@@ -1,370 +1,114 @@
-# 🎯 Sistema de Regras de Contexto AI
+# Projeto Argos — Context-Aware AI Engineering Workflow
 
-## 🌟 Visão Geral Rápida
-Um sistema abrangente para gerenciar interações de IA através de gerenciamento de memória, rastreamento de lições aprendidas e operação em modo duplo (Planejamento/Agente). Este sistema garante desenvolvimento consistente e de alta qualidade enquanto mantém documentação detalhada do projeto e retenção de conhecimento.
+Argos is an experimental AI engineering framework for making agent-assisted development more **context-aware, repeatable and auditable**.
 
-## 🔄 Componentes Principais
-1. **Sistema de Memória** (`memories.md`)
-   - Rastreia todas as interações cronologicamente
-   - Atualiza automaticamente com timestamps e tags
-   - Mantém contexto do projeto e decisões
-   - Usa formato de controle de versão [v1.0.0]
-   - Suporta #tags para busca fácil
+The project explores a practical question:
 
-2. **Lições Aprendidas** (`lessons-learned.md`)
-   - Captura soluções e melhores práticas
-   - Usa formato estruturado: Problema → Solução → Impacto
-   - Categoriza por componente, TypeScript, erros, etc.
-   - Prioriza problemas (Crítico/Importante/Melhoria)
-   - Vincula a exemplos de código relacionados
+> How can an AI assistant retain project context, plan before acting, learn from previous work and leave behind useful engineering documentation?
 
-3. **Scratchpad** (`scratchpad.md`)
-   - Gerencia fase atual e tarefas
-   - Rastreia progresso de implementação
-   - Usa marcadores de status claros [X], [-], [ ], [!], [?]
-   - Mantém dependências de tarefas
-   - Atualiza métricas de confiança
+## What Argos demonstrates
 
-## 🚀 Primeira Interação - Onboarding Automático
+Argos combines four concerns that are often treated separately:
 
-### Análise Automática do Projeto
-Na primeira interação, quando a pasta `./docs` não existe, o sistema:
-
-1. **Análise Completa do Projeto**:
-   - Lê toda a estrutura de arquivos
-   - Identifica tecnologias utilizadas
-   - Analisa dependências e configurações
-   - Detecta padrões de código existentes
-
-2. **Criação de Documentação Inicial**:
-   - Utiliza templates da pasta `.cursor/templates`
-   - Adapta conteúdo ao contexto específico do projeto
-   - Cria estrutura de documentação completa
-   - Estabelece padrões de qualidade
-
-3. **Apresentação da Persona Argos Panoptes**:
-   - Se apresenta como assistente especializado
-   - Explica capacidades e especialidades
-   - Informa sobre a documentação criada
-   - Oferece suporte para próximos passos
-
-### Fluxo da Primeira Interação
-```markdown
-1. Detecção: Sistema verifica ausência de ./docs
-2. Análise: Leitura completa da estrutura do projeto
-3. Templates: Aplicação de templates disponíveis
-4. Adaptação: Personalização para contexto específico
-5. Criação: Geração de documentação inicial
-6. Apresentação: Persona Argos Panoptes se apresenta
-7. Informação: Comunica sobre documentação criada
-8. Suporte: Oferece assistência para próximos passos
+```text
+Project context
+      ↓
+Planning
+      ↓
+Agent execution
+      ↓
+Memory + lessons learned
 ```
 
-## 🎯 Operação do Sistema de Modos
+Instead of treating each AI interaction as isolated, the system maintains structured artifacts that preserve what matters across tasks.
 
-### Modo Planejamento 🎯
-```markdown
-Gatilho: "plan"
-Propósito: Coleta de informações e planejamento
-Requisitos:
-- Analisar entrada do usuário
-- Cruzar referências de requisitos
-- Gerar perguntas esclarecedoras
-- Calcular pontuação de confiança
-- Criar divisão de tarefas
+## Core building blocks
+
+### Memory
+
+A persistent project memory records relevant decisions, context and previous interactions.
+
+The goal is not to store everything. It is to preserve information that improves future engineering decisions.
+
+### Lessons learned
+
+Recurring problems and useful solutions are captured as reusable engineering knowledge:
+
+```text
+Problem
+  ↓
+Solution
+  ↓
+Impact
 ```
 
-### Modo Agente ⚡
-```markdown
-Gatilho: "agent"
-Requisitos de Ativação:
-- 95% de nível de confiança
-- Todas as perguntas respondidas
-- Tarefas definidas
-- Nenhum problema bloqueante
-- Requisitos verificados
+### Scratchpad
+
+The scratchpad acts as an explicit working state for:
+
+- current phase;
+- tasks;
+- dependencies;
+- blockers;
+- confidence;
+- execution progress.
+
+### Planning and execution modes
+
+Argos separates understanding from execution.
+
+```text
+Request
+  ↓
+Plan
+  ↓
+Clarify
+  ↓
+Build confidence
+  ↓
+Execute
+  ↓
+Document
 ```
 
-## 🚀 Etapas do Fluxo de Trabalho
+This boundary is intentional: agentic systems become more reliable when action follows explicit context and planning rather than immediate generation.
 
-1. **Inicializar Planejamento** 🎯
-   ```markdown
-   - Usar gatilho "plan"
-   - Sistema cria nova entrada no scratchpad
-   - Gera mínimo 3 perguntas
-   - Define pontuação inicial de confiança
-   ```
+## First-project onboarding
 
-2. **Construir Confiança** 📈
-   ```markdown
-   - Responder todas as perguntas
-   - Verificar requisitos
-   - Atualizar dependências de tarefas
-   - Monitorar pontuação de confiança
-   ```
+When introduced to a new codebase, the workflow can:
 
-3. **Executar Implementação** ⚡
-   ```markdown
-   - Alcançar 95% de confiança
-   - Usar gatilho "agent"
-   - Sistema implementa solução
-   - Atualiza documentação
-   ```
+1. inspect the repository structure;
+2. identify technologies and conventions;
+3. establish project documentation;
+4. create working-memory artifacts;
+5. derive an initial engineering context.
 
-## 🎮 Exemplos de Fluxo de Trabalho
+This gives subsequent tasks a shared baseline instead of restarting from zero.
 
-### Exemplo 1: Primeira Interação com Projeto Novo
-```markdown
-SISTEMA: 🔍 DETECTANDO PRIMEIRA INTERAÇÃO
-- Pasta ./docs não encontrada
-- Iniciando análise automática do projeto
-- Lendo estrutura de arquivos
-- Identificando tecnologias
+## Why I built it
 
-SISTEMA: 📋 ANÁLISE COMPLETA
-- Projeto: Next.js 14 + TypeScript
-- UI: Tailwind CSS + Shadcn UI
-- Estado: Zustand
-- Testes: Jest + Testing Library
+Argos predates some of my newer work on agentic systems, but it already reflects principles that continue to guide my architecture:
 
-SISTEMA: 📚 CRIANDO DOCUMENTAÇÃO
-- Aplicando templates disponíveis
-- Adaptando ao contexto do projeto
-- Criando estrutura ./docs completa
-- Estabelecendo padrões de qualidade
+- context should be explicit;
+- memory should be structured;
+- execution should follow planning;
+- decisions should leave evidence;
+- documentation is part of engineering;
+- agents need boundaries, not just prompts.
 
-ARGOS PANOPTES: 👋 OLÁ! SOU SEU ASSISTENTE ESPECIALIZADO
-- Especialista em desenvolvimento web moderno
-- Capacidades: React, TypeScript, Next.js, UI/UX
-- Documentação inicial criada automaticamente
-- Pronto para ajudar com seu projeto!
-```
+These ideas later became important in broader work around LucyOS, specialist agents, governance and long-term memory.
 
-### Exemplo 2: Criando uma Nova Funcionalidade
-```markdown
-USUÁRIO: "plan implementar um novo componente de botão"
+## Repository focus
 
-IA: 🎯 MODO PLANEJAMENTO ATIVADO
-Tarefa Atual: Implementar novo componente de botão
-Perguntas:
-1. Quais variantes são necessárias? (primário/secundário/contorno)
-2. Deve suportar ícones?
-3. Quais tamanhos são necessários?
-Confiança: 65%
+This repository contains the workflow definitions, templates and conventions used to experiment with this model of AI-assisted development.
 
-USUÁRIO: "variantes primário e secundário, com ícones, três tamanhos"
+It should be read as an **engineering experiment and framework**, not as a finished autonomous-development product.
 
-IA: Entendimento Atualizado:
-- Variantes Primário/Secundário
-- Suporte a ícones
-- Tamanhos Pequeno/Médio/Grande
-Confiança: 95%
+## Related work
 
-USUÁRIO: "agent"
-
-IA: ⚡ MODO AGENTE ATIVADO
-- Criando componente Button
-- Implementando variantes
-- Adicionando suporte a ícones
-- Testando acessibilidade
-```
-
-### Exemplo 3: Corrigindo um Bug
-```markdown
-USUÁRIO: "plan corrigir o erro de envio do formulário"
-
-IA: 🎯 MODO PLANEJAMENTO ATIVADO
-Tarefa Atual: Debugar erro de envio do formulário
-Perguntas:
-1. Quando o erro ocorre?
-2. Alguma mensagem de erro no console?
-3. Qual componente de formulário é afetado?
-Confiança: 50%
-
-USUÁRIO: "acontece no formulário de login, console mostra erro de validação"
-
-IA: Análise de Cadeia de Pensamento:
-1. Validação do formulário de login
-2. Verificação de erro no console
-3. Regras de validação de entrada
-Confiança: 95%
-
-USUÁRIO: "agent"
-
-IA: ⚡ MODO AGENTE ATIVADO
-- Debugar validação
-- Corrigir tratamento de erro
-- Testar envio
-```
-
-### Exemplo 4: Configuração do Projeto
-```markdown
-USUÁRIO: "plan configurar novo projeto Next.js"
-
-IA: 🎯 MODO PLANEJAMENTO ATIVADO
-Tarefa Atual: Inicializar projeto Next.js
-Perguntas:
-1. Qual versão do Next.js?
-2. TypeScript ou JavaScript?
-3. Quais componentes UI são necessários?
-Confiança: 70%
-
-USUÁRIO: "Next.js 14, TypeScript, Shadcn UI"
-
-IA: Estrutura do Projeto:
-- Configuração Next.js 14
-- Configuração TypeScript
-- Integração Shadcn UI
-Confiança: 95%
-
-USUÁRIO: "agent"
-
-IA: ⚡ MODO AGENTE ATIVADO
-- Criando projeto
-- Configurando TypeScript
-- Instalando dependências
-```
-
-### Exemplo 5: Atualização de Documentação
-```markdown
-USUÁRIO: "plan atualizar documentação da API"
-
-IA: 🎯 MODO PLANEJAMENTO ATIVADO
-Tarefa Atual: Atualizar documentação da API
-Perguntas:
-1. Quais endpoints precisam de atualizações?
-2. Algum novo parâmetro adicionado?
-3. Mudanças no formato de resposta?
-Confiança: 60%
-
-USUÁRIO: "novos endpoints de autenticação"
-
-IA: Plano de Documentação:
-- Endpoints de autenticação
-- Formatos de Requisição/Resposta
-- Exemplo de uso
-Confiança: 95%
-
-USUÁRIO: "agent"
-
-IA: ⚡ MODO AGENTE ATIVADO
-- Atualizando documentação
-- Adicionando exemplos
-- Verificando formatos
-```
-
-## 📝 Padrões de Documentação
-
-### Atualizações em Tempo Real
-- Memórias: Toda interação
-- Lições: Após soluções
-- Scratchpad: Durante implementação
-
-### Controle de Versão
-```markdown
-[v1.0.0] Formato para todas as entradas
-- Atualizações de desenvolvimento
-- Atualizações manuais
-- Rastreamento de progresso
-```
-
-### Cruzamento de Referências
-```markdown
-memories.md ↔️ lessons-learned.md ↔️ scratchpad.md
-```
-
-## 🔍 Estrutura de Diretórios
-```
-.cursor/
-├── memories.md          # Histórico de interações
-├── lessons-learned.md   # Soluções e práticas
-├── scratchpad.md       # Rastreamento da fase atual
-├── project-requirements.md  # Especificações do projeto
-├── templates/          # Templates para documentação
-│   ├── project-analysis.md
-│   ├── requirements.md
-│   └── documentation.md
-└── rules/              # Regras do sistema
-    ├── brain-memories-lessons-learned-scratchpad.mdc
-    └── documentations-inline-comments-changelog-docs.mdc
-```
-
-## 🛠️ Melhores Práticas
-
-1. **Gerenciamento de Memória**
-   - Usar timestamps consistentemente
-   - Incluir #tags relevantes
-   - Cruzar referências de entradas relacionadas
-   - Manter formato de linha única
-
-2. **Rastreamento de Tarefas**
-   - Gerar IDs únicos de tarefas
-   - Rastrear dependências
-   - Atualizar status em tempo real
-   - Manter hierarquia
-
-3. **Documentação**
-   - Atualizar em tempo real
-   - Incluir números de versão
-   - Cruzar referências de arquivos relacionados
-   - Seguir formatos estruturados
-
-4. **Primeira Interação**
-   - Análise automática completa
-   - Criação de documentação inicial
-   - Apresentação da persona
-   - Estabelecimento de padrões
-
-## 🎯 Dicas e Truques
-
-### 🔄 Lidando com Problemas de IA e Cursor
-1. **Abas Obrigatórias**:
-   ```
-   1️⃣ Arquivo de trabalho ativo
-   2️⃣ Configurações do Cursor (Feature → Resync)
-   3️⃣ .cursorrules (para recarregamento automático)
-   ```
-
-2. **Processo de Recarregamento Rápido**:
-   ```
-   1. Ctrl+Shift+P
-   2. "Developer: Reload Window"
-   3. Aguardar 3-10 segundos
-   ```
-
-### 💡 Dicas Profissionais
-- Manter arquivo .cursorrules aberto
-- Monitorar pontuações de confiança
-- Usar gatilhos apropriados
-- Seguir formato de versão
-- Cruzar referências frequentemente
-- Aproveitar onboarding automático na primeira interação
-
-## 🤝 Contribuindo
-Sinta-se livre para melhorar este sistema:
-1. Adicionar regras personalizadas
-2. Melhorar rastreamento
-3. Aprimorar métricas
-4. Compartilhar práticas
-5. Expandir templates de documentação
-
-## 📝 Licença
-Licença MIT - Livre para usar e modificar!
-
-## 👋 Contatos / Contrate-me
-- Instagram: https://www.instagram.com/clover_nat/
-- Facebook: https://www.facebook.com/nathanielmarquez.20
-- Twitter: https://x.com/T1nker1220
-
-## 💖 Apoie Este Projeto
-Se este sistema te ajuda, considere apoiar:
-- PayPal: https://www.paypal.me/JohnNathanielMarquez
-- GCash: 09605088715
-
-## 📚 Saiba Mais
-Para contexto completo e discussões:
-https://forum.cursor.com/t/rules-for-ultra-context-memories-lessons-scratchpad-with-plan-and-act-modes/48792/22?u=t1nker-1220
+- [LucyOS case study](https://claudiodearaujo.dev.br/pt/work/lucyos)
+- [Cláudio Araújo — Software Engineering, AI Engineering & Technical Leadership](https://claudiodearaujo.dev.br)
 
 ---
 
-*Nota: Este sistema é projetado para gerenciamento perfeito de interações de IA. Para diretrizes detalhadas de implementação, consulte os arquivos de regras individuais.* 🚀
+Built as part of my exploration of AI engineering, agentic workflows, memory and developer systems.
